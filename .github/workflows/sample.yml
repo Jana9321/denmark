@@ -42,7 +42,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Display checkout information
+      - name: Display checkout information.
         run: |
             echo $GITHUB_SHA          
             echo $GITHUB_REPOSITORY
