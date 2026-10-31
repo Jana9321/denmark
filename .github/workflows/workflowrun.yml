@@ -1,0 +1,12 @@
+
+name: workflow run
+on:
+    workflow_run:
+        workflows: ["sample"]
+        types:
+            - completed
+jobs:
+    report:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "The sample workflow completed."
