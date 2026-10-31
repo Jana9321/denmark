@@ -3,6 +3,15 @@ on:
   push:
     branches:
       - main
+      - "feature/*"
+      - "release/**"
+      - "!develop"
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name of the person to greet'
+        required: true
+        default: 'World'    
   pull_request:
     branches:
       - main
